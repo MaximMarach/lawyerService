@@ -22,6 +22,8 @@ class Contact(models.Model):
 
     date_of_call = models.DateField(verbose_name='Дата заявки', auto_now_add=True)
 
+    is_checked = models.BooleanField(verbose_name='Прошел ли консультацию?', default=False)
+
     def __str__(self):
         return f'{self.first_name} {self.second_name}'
 
